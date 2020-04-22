@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:#353338;
+    font-family: sans-serif;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(102, 46, 252);
+    align-content: center;
+}
+
+header {
+    background-color: rgb(102, 46, 252);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Asap, sans-serif;
+}
+
+h1{
+    background: none;
+}
+span{
+    background: none;
+}
+.score-board{
+    border: 3px solid white;
+    margin: 20px auto;
+    width: 200px;
+    color: white;
+    font-size: 40px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: Asap, sans-serif;
+    position: relative;
+}
+
+.badge{
+    font-size: 15px;
+    padding: 2px 14px;
+    background-color: red;
+}
+
+#user-label{
+    position: absolute;
+    top:30px;
+    left: -25px;
+
+}
+
+#cpu-label{
+    position: absolute;
+    top:30px;
+    right: -25px
+
+}
+
+.result{
+    font-size: 46px;
+    color: white;
+    font-family: Asap, sans-serif;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.navbar{
+    height: 100px;
+    align-content: center;
+}
+#startGameFromRanking {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+
+.choices{
+    margin: 35px 0px 20px 0px;
+    text-align: center;
+}
+
+.choice{
+    margin: 0px 5px;
+    padding: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: 0.5s ease;
+}
+
+img{
+    background: none;
+}
+
+.choice:hover{
+    cursor: grabbing;
+    background-color:blueviolet;
+}
+
+.astion-message{
+    color:limegreen;
+    font-size: 30px;
+    text-align: center;
+    font-family: Asap, sans-serif;
+}
+
+.green-glow{
+    border: 3px solid green;
+    box-shadow: 0px 0 50px green;
+}
+
+.red-glow{
+    border: 3px solid red;
+    box-shadow: 0 0 50px red;
+}
+
+.grey-glow{
+    border: 3px solid lightgray;
+    box-shadow: 0 0 50px lightgray;
+}
+
+.box {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #353338;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.rankingStart{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: #353338;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+#enterUsername{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    background:none;
+}
+
+.box input[type="text"]{
+    border: 0;
+    background: none;
+    margin: 40px auto;
+    display: block;
+    text-align: center;
+    border: 2px solid #0fc0ea;
+    padding: 15px 5px;
+    border-radius: 25px;
+    width: 150px;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus{
+    width: 280px;
+    border-color: #00ff4e;
+}
+.customButton{
+    border: 0;
+    background: none;
+    display: inline-block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #0fc0ea;
+    padding: 15px 5px;
+    border-radius: 25px;
+    width: 150px;
+    outline: none;
+    color: white;
+    transition: 0.25s ease;
+    cursor: pointer;
+
+}
+
+.customButton:hover{
+    background-color: #00ff4e;
+    width: 280px;
+    border: 2px solid #00ff4e;
+    color: darkmagenta;
+    font-weight: bold;
+
+}
+
+form{
+    display: inline-block;
+}
+
+.buttonWrapper{
+    margin: auto;
+    text-align: center;
+
+}

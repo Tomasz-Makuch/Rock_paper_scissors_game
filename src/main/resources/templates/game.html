@@ -1,0 +1,61 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>///// GAME /////</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1><span>WELCOME: </span><span th:text="${user.getUsername()}"></span></h1>
+        <span>You must first score 10 points to win</span>
+    </header>
+    
+    <div class="score-board">
+        <div class="badge" id="user-label" th:text="${user.getUsername()}">USER</div>
+        <div class="badge" id="cpu-label">CPU</div>
+        <span id="user-score" >0</span>:
+        <span id="cpu-score">0</span>
+    </div>
+    
+    <div class="result">
+        <p>Paper cover rock, you win</p>
+    
+    </div>
+    
+    <div class="choices">
+        
+        <div class="choice" id="p">
+            <img src="https://img.icons8.com/color/96/000000/hand.png"/>     
+        </div>
+        <div class="choice" id="r">
+            <img src="https://img.icons8.com/color/96/000000/hand-rock.png"/>
+        </div>
+        <div class="choice" id="s">
+            <img src="https://img.icons8.com/color/96/000000/hand-scissors.png"/> 
+        </div>        
+        
+    </div>
+    
+    <p class="astion-message">Make your move</p>
+
+    <div class="buttonWrapper" >
+        <input  type="button" value="restart game" class="customButton" id="restart" onclick="restartGame()">
+        <form action="#" th:action="@{/ranking}" method="get">
+            <input type="submit" value="ranking"class="customButton" id="showRank">
+        </form>
+
+        <form action="#" th:action="@{/save}" method="post" th:object="${user}">
+            <input type="hidden"  th:field="*{username}" th:value="${user.getUsername()}" />
+            <input type="hidden"  th:field="*{userPoints}" id="userPoint"/>
+            <input type="hidden"  th:field="*{cpuPoints}" id="cpuPoint"/>
+            <input type="submit" value="save score"class="customButton" id="save" >
+        </form>
+
+    </div>
+
+    <script src="js/app.js" charset="utf-8"></script>
+
+</body>
+</html>

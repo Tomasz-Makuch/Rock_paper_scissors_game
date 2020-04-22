@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>Start game</title>
+     <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+  <div class="wrapper">
+      <form action="#" th:action="@{/game}" th:object="${user}" method="post"class="box">
+          <h1 id="enterUsername">Enter username</h1>
+          <input  type="text"  th:field="*{username}"  placeholder="Username" >
+          <input type="submit" name="" value="start game"class="customButton">
+      </form>
+      <form action="#" th:action="@{/ranking}" method="get" class="rankingStart">
+          <input type="submit" value="ranking"class="customButton" id="showRank">
+      </form>
+
+  </div>
+  </body>
+
+</html> 
